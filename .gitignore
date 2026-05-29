@@ -1,0 +1,15 @@
+.idea/
+.vscode/
+.DS_Store
+
+backend/target/
+
+web/node_modules/
+web/dist/
+
+mobile/node_modules/
+mobile/.expo/
+
+*.log
+.env
+
