@@ -42,7 +42,7 @@ export function canAccess(path, user) {
   }
 
   if (isProfessorRoute(path)) {
-    return user.role === "PROFESSOR" || user.role === "ADMIN";
+    return user.role === "PROFESSOR";
   }
 
   return false;

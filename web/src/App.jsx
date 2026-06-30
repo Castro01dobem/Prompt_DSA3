@@ -78,11 +78,6 @@ function App() {
   useEffect(() => {
     if (!canAccess(path, user)) {
       navigate(user ? pathForRole(user.role) : "/welcome", true);
-      return;
-    }
-
-    if (user && (path === "/login" || path === "/welcome")) {
-      navigate(pathForRole(user.role), true);
     }
   }, [path, user]);
 

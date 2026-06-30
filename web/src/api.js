@@ -24,7 +24,16 @@ export function clearSession() {
 
 export function getUser() {
   const raw = localStorage.getItem("user");
-  return raw ? JSON.parse(raw) : null;
+  if (!raw) {
+    return null;
+  }
+
+  try {
+    return JSON.parse(raw);
+  } catch {
+    clearSession();
+    return null;
+  }
 }
 
 export async function apiFetch(path, options = {}) {
